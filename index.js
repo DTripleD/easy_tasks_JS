@@ -434,29 +434,42 @@ class StringBuilder{
 // makeDish("Кирилл", "картошку");
 
 
-const makeSheff = function (sheff) {
-  const makeDish = function(dish) {
-    console.log(`${sheff} делает ${dish}`);
-  };
+// const makeSheff = function (sheff) {
+//   const makeDish = function(dish) {
+//     console.log(`${sheff} делает ${dish}`);
+//   };
 
-  return makeDish;
+//   return makeDish;
+// }
+
+
+// const art = makeSheff("Артем");
+
+
+// art("омлет");
+// art("чай");
+// art("салат");
+
+// const kir = makeSheff("Кирилл");
+
+// kir("курицу");
+// kir("стейк");
+// kir("картошку");
+
+// console.dir(kir);
+
+// THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+const thisItem = {
+  name: "Danil",
+  thisMethod(){
+    console.log("this: ", this);
+    console.log("this.name: ", this.name);
+  }
 }
 
 
-const art = makeSheff("Артем");
 
+const checkOut = thisItem.thisMethod;
 
-art("омлет");
-art("чай");
-art("салат");
-
-const kir = makeSheff("Кирилл");
-
-kir("курицу");
-kir("стейк");
-kir("картошку");
-
-console.dir(kir);
-
-
-
+checkOut();
